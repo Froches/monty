@@ -1,13 +1,19 @@
 #include "monty.h"
 
+/**
+ * add - function that adds the top two elements of the stack
+ * @stack: struct containing info
+ * @line_number: line number
+ */
 
 void add(stack_t **stack, unsigned int line_number)
 {
 	int operand1, operand2, result;
 	stack_t *temp;
+
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "Not enough operands for addition at line %u.\n", line_number);
+		fprintf(stderr, "Not enough ops %u.\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 

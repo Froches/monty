@@ -1,9 +1,14 @@
 #include "monty.h"
 
+/**
+ * push - function that pushes an element to the stack
+ * @stack: pointer to struct of values
+ * @value: Value to be pushed to the stack
+ */
 void push(stack_t **stack, unsigned int value)
 {
 	stack_t *new_node = malloc(sizeof(stack_t));
-	
+
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Memory allocation failed.\n");
