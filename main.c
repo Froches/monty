@@ -10,10 +10,11 @@ int main()
 	stack_t *stack = NULL;
 	instruction_t instructions[] = {
 		{"push", push},
-		{"add", add}
+		{"add", add},
+		{"pall", pall}
 	};
 
-	char *input[] = {"push 5", "push 3", "add"};
+	char *input[] = {"push 5", "push 3", "pall"};
 	line_number = 1;
 
 	for (i = 0; i < sizeof(input) / sizeof(input[0]); i++)
@@ -37,7 +38,8 @@ int main()
 		instr->f(&stack, line_number);
 		line_number++;
 	}
-	printf("Result: %d\n", stack->n);
+	/* printf("Result: %d\n", stack->n); */
+	printf("%d\n", stack->n);
 
 	while (stack != NULL)
 	{
