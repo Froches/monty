@@ -38,7 +38,7 @@ int main(void)
 	printf("%d\n", stack->n);
 	while (stack != NULL)
 	{
-		*temp = stack;
+		temp = stack;
 		stack = stack->next;
 		free(temp);
 	}
