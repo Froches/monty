@@ -34,7 +34,11 @@ int main(int argc, char *argv[])
 	}
 	while (fgets(line, sizeof(line), file) != NULL)
 	{
-		line[strcspn(line, "\n")] = '\0'; /* Remove newline character */
+		line[strcspn(line, "\n")] = '\0';
+		if (strlen(line) == 0 || line[0] == '#')
+		{
+			continue;
+		}
 		if (sscanf(line, "%s %d", opcode, &value) == 2 && strcmp(opcode, "push") == 0)
 			push(&stack, value);
 		else
