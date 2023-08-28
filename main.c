@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	instruction_t instructions[] = {
 		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
 		{"swap", swap}, {"nop", nop}, {"add", add}, {"sub", sub},
-		{"mul", mul}, {"divi", divi}, {"mod", mod}
+		{"mul", mul}, {"div", divide}, {"mod", mod}
 	};
 
 	if (argc != 2)

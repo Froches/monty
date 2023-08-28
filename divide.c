@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void divi(stack_t **stack, unsigned int line_number)
+void divide(stack_t **stack, unsigned int line_number)
 {
 	int quotient;
 
