@@ -22,13 +22,13 @@ int main(int argc, char *argv[])
 
 	if (argc != 2)
 	{
-		fprintf(stderr, "Usage: %s <file>\n", argv[0]);
+		fprintf(stderr, "USAGE: %s file\n", monty);
 		return (EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
-		fprintf(stderr, "Error opening file: %s\n", argv[1]);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		return (EXIT_FAILURE);
 	}
 	while (fgets(line, sizeof(line), file) != NULL)
